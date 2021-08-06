@@ -25,3 +25,4 @@ class LinkedDict:
     def get(self, key):
         index = hash(key) % len(self.items)
         return self.items[index].get(key)
+
