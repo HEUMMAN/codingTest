@@ -1,9 +1,9 @@
 class LinkedTuple:
     def __init__(self):
-        self.items = list()
+        self.items = []
 
     def add(self, key, value):
-        self.items.append(key, value)
+        self.items.append((key, value))
 
     def get(self, key):
         for k, v in self.items:
@@ -15,7 +15,7 @@ class LinkedDict:
     def __init__(self):
         self.items = []
         for i in range(8):
-            self.items.append(LinkedTuple)
+            self.items.append(LinkedTuple())
 
     def put(self, key, value):
         index = hash(key) % len(self.items)
@@ -26,3 +26,7 @@ class LinkedDict:
         index = hash(key) % len(self.items)
         return self.items[index].get(key)
 
+a = LinkedDict()
+a.put('a', 1)
+a.put('b', 2)
+print(a.get('a'))
