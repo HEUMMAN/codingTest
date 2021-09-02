@@ -45,7 +45,6 @@ def solution(genres, plays):
                 if genres[k] == best_album[i] and plays[k] == value:
                     answer.append(k)
                     break
-
     return answer
 
 #print(solution(["classic", "pop", "classic", "classic","jazz","pop", "Rock", "jazz"] ,[500, 600, 150, 800, 1100, 2500, 100, 1000]))
