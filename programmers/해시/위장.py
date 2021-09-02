@@ -1,15 +1,17 @@
 def solution(clothes):
-    types = []
-    for cloth, type_ in clothes:
-        types.append(type_)
-    sets = set(types)
-    answer = [0] * len(sets)
+    closet = {}
+    answer = 1
 
-    for i in range(len(sets)):
-        for j in range(len(types)):
-            if sets[i] == types[j]:
-                answer[i] += 1
-    print(answer)
+    # 같은 종류의 옷끼리 묶어서 사전에 저장
+    for cloth in clothes:
+        if cloth[1] in closet.keys():
+            closet[cloth[1]].append(cloth[0])
+        else:
+            closet[cloth[1]] = [cloth[0]]
+    print(closet)
+    # 경우의 수 구하기
+    for value in closet.values():
+        answer *= len(value) + 1
 
-    return answer
-solution([["yellowhat", "headgear"], ["bluesunglasses", "eyewear"], ["green_turban", "headgear"]])
+    # 아무것도 입지 않은 경우 하나 제외
+    return answer - 1
