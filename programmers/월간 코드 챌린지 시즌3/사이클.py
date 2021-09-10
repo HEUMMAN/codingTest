@@ -77,5 +77,4 @@ def check_cycle(count, garo, grid, now_direction, sero, grid_dic):
         grid_dic[str(garo) + str(sero)] = grid_dic[str(garo) + str(sero)] + str(' ') + now_direction
         count += 1
 
-
 print(solution(["LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR","RLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLRL"]))
