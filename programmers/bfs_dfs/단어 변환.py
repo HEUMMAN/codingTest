@@ -17,3 +17,4 @@ def solution(begin, target, words):
             elif diff == 1:
                 visited.append((word, depth + 1))
     return answer
+ 
