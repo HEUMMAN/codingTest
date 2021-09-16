@@ -51,6 +51,5 @@ def make_n_binary(k, n):
     return base
 
 
-
 solution(437674, 3)
 solution(110011, 10)
