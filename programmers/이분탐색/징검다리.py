@@ -24,3 +24,4 @@ def solution(distance, rocks, n):
                 answer = mins
                 left = mid + 1
     return answer
+
