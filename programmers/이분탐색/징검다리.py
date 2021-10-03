@@ -25,3 +25,4 @@ def solution(distance, rocks, n):
                 left = mid + 1
     return answer
 
+
